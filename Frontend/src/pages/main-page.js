@@ -5,7 +5,7 @@ export default function MainPage(){
     return (
         <div>
             <Typography variant="h3" noWrap>
-                Welcome to the best app ever!
+                Welcome to the our app!
             </Typography>
         </div>
     )

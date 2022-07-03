@@ -2,22 +2,22 @@ import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import '../form.css';
 
-export default function AlmostOutOfStockForm({ flexDirection = "column", ...props }) {
-    const [minAmount, setMinAmount] = useState(0);
+export default function AllProductsThatSoldierTookForm({ flexDirection = "column", ...props }) {
+    const [soldierId, setSoldierId] = useState(0);
 
-    props.setParams(() => `min_amount=${minAmount}`);
+    props.setParams(() => `soldierId=${soldierId}`);
     return (
         <div>
             <form style={{ display: 'flex', flexDirection: flexDirection }}
                 {...props}>
                 <div className='form-control'>
                     <TextField
-                        name='minAmount'
+                        name='soldierId'
                         variant="outlined"
-                        label="Min Amount"
+                        label="Soldier Id"
                         type="number"
-                        value={minAmount}
-                        onChange={(ev) => setMinAmount(ev.target.value)}
+                        value={soldierId}
+                        onChange={(ev) => setSoldierId(ev.target.value)}
                     />
                 </div>
             </form>
